@@ -20,7 +20,7 @@ const config = defineConfig({
   build: {
     publicFolder: "public",
     outputFolder: "admin",
-    basePath: "souzarod", // Remover a barra e usar só o nome do repo
+    // basePath removido ou comentado
   },
   schema: {
     collections: [Page, Post, Author, Tag, Global],
