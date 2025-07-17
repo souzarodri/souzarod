@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   trailingSlash: true,
@@ -7,8 +8,8 @@ const nextConfig = {
     unoptimized: true
   },
   output: 'export',
-  basePath: '/souzarod', // Substitua pelo nome do seu repositório
-  assetPrefix: '/souzarod/', // Substitua pelo nome do seu repositório
+  basePath: '/souzarod',
+  assetPrefix: '/souzarod/',
 }
 
-module.exports = nextConfig
+export default nextConfig
