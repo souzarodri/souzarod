@@ -6,11 +6,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Configuração para GitHub Pages
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/souzarod' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/souzarod' : '',
-  // Para TinaCMS funcionar com GitHub Pages
+  // Para GitHub Pages com repositório nomeado
+  basePath: '/souzarod',
+  assetPrefix: '/souzarod',
+  // Configuração específica para TinaCMS
   async rewrites() {
     return [
       {

@@ -1,5 +1,4 @@
 import { defineConfig } from "tinacms";
-
 import Post from "./collection/post";
 import Global from "./collection/global";
 import Author from "./collection/author";
@@ -19,8 +18,8 @@ const config = defineConfig({
   build: {
     publicFolder: "public",
     outputFolder: "admin",
-    // Para GitHub Pages, você precisa configurar o basePath correto
-    basePath: process.env.NODE_ENV === 'production' ? '/souzarod' : '',
+    // CRÍTICO: O basePath deve ser uma string vazia para GitHub Pages
+    basePath: "",
   },
   schema: {
     collections: [Page, Post, Author, Tag, Global],
