@@ -25,11 +25,14 @@ jobs:
       
     - name: Build
       run: npm run build
-      
+      env:
+        NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
+        TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+        
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: ./dist
+        path: ./out
         
     - name: Deploy to GitHub Pages
       uses: actions/deploy-pages@v4
