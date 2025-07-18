@@ -20,7 +20,8 @@ const config = defineConfig({
   build: {
     publicFolder: "public",
     outputFolder: "admin",
-    // basePath removido ou comentado
+    // Para GitHub Pages, você precisa configurar o basePath correto
+    basePath: process.env.NODE_ENV === 'production' ? '/souzarod' : '',
   },
   schema: {
     collections: [Page, Post, Author, Tag, Global],

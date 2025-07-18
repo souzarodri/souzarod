@@ -25,18 +25,9 @@ jobs:
       
     - name: Build TinaCMS
       run: npx tinacms build
-      env:
-        NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
-        TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        
+      
     - name: Build Next.js
       run: npm run build
-      env:
-        NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
-        TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        
-    - name: Export static files
-      run: npm run export
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
